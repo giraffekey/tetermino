@@ -62,7 +62,6 @@ typedef enum {
 typedef struct {
     unsigned int type, color;
     int x, y;
-    bool newly_spawned;
     unsigned int shape[TETROMINO_SIZE][TETROMINO_SIZE];
 } tetromino_t;
 
@@ -242,7 +241,6 @@ void add_tetromino() {
             break;
     }
 
-    tetromino.newly_spawned = true;
     memcpy(tetromino.shape, TETROMINOS[tetromino.type], sizeof(TETROMINOS[tetromino.type]));
 
     const int orientation = rand() % 4;
