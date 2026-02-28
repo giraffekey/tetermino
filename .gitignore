@@ -1,0 +1,19 @@
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Build directories (if you build in-source - though this is bad practice)
+/*.cmake
+/*_autogen/
+
+# Common build directories
+/build/
+/build-*/
+/cmake-build-*/
+
+# IDEs
+.idea/
+.vscode/
+.vs/
