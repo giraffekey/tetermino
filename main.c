@@ -137,7 +137,7 @@ bool redraw = false;
 unsigned int score;
 unsigned int lines;
 unsigned int level;
-bool speed_index;
+int speed_index;
 bool fast = false;
 bool clears[HEIGHT];
 
@@ -358,9 +358,9 @@ void clear_lines() {
         lines += cleared;
         level = lines / 10;
 
-        for (int i = speed_index + 1; i < sizeof(SPEEDS) / sizeof(SPEEDS[0]); i++) {
-            if (level >= SPEEDS[i][0]) {
-                speed_index = i;
+        for (int j = speed_index + 1; j < sizeof(SPEEDS) / sizeof(SPEEDS[0]); j++) {
+            if (level >= SPEEDS[j][0]) {
+                speed_index = j;
             }
         }
         add_tetromino();
